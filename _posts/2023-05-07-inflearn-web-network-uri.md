@@ -1,7 +1,7 @@
 ---
 layout: post
 title: URI
-subtitle: "인터넷 네트워크 개념 정리"
+subtitle: "웹 브라우저의 요청 흐름"
 categories: network
 tags: [network, web]
 ---
@@ -24,7 +24,7 @@ Host: www.google.com
 
 2. TCP/IP 패킷을 생성하여 HTTP 요청 메시지를 담아 전송
 3. Server(google)에서 메시지를 해석
-4. 1번과 같은 방식으로 HTTP 응답 메시지를 생성 
+4. HTTP 응답 메시지를 생성 후 1번과 같은 방식으로 전송 
 HTTP/1.1 200 OK
 Content-Type: text/html;charset=UTF-8
 Content-Length: 3423 ....
