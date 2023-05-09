@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 인터넷 네트워크
-subtitle: "인터넷 네트워크 정리"
+subtitle: "인터넷 네트워크 개념 정리"
 categories: network
 tags: [network, web]
 ---
