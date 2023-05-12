@@ -26,7 +26,7 @@ API URI 고민
 [예시]
 - 회원 목록 조회 / members
 - 회원 조회 / members/{id}
-- 회원 등록 / members/{id}
+- 회원 등록 / members
 - 회원 삭제 / members/{id}
 - 회원 수정 / members/{id}
 
@@ -62,3 +62,20 @@ POST를 어떻게 사용한다는 것 일까?에 대한 고민
  => 예시) POST /orders/{orderID}/start-delivery (컨트롤 URI)
  - 다른 메서드로 처리하기 애매한 경우?
  => JSON으로 조회 데이터를 넘겨야하는데, GET 메서드를 사용하기 어려운 경우
+
+3. PUT
+ - 리소스를 완전히 대체
+  - 리소스가 있으면 대체
+  - 리소스가 없으면 생성
+  - 데이터를 덮어버림
+ - 클라이언트가 리소를 식별
+  - 클라이언트가 리소스 위치를 알고 URI를 지정
+  - POST와 차이점
+
+POST는 리소스를 식별하지 못하고 데이터를 처리
+PUT은 100번이라는 것 을 식별하고 데이터 처리
+POST /members
+PUT /members/100
+
+4. PATCH
+
