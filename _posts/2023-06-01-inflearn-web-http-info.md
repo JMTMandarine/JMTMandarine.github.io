@@ -1,34 +1,36 @@
 ---
 layout: post
-title: HTTP 헤더
-subtitle: "HTTP 일반 헤더"
+title: HTTP 헤더 정보
+subtitle: "HTTP 헤더 정보"
 categories: header
 tags: [network, web, http, header]
 ---
 
-## 일반 헤더 - 표현
+## 일반 정보
 
-1. Content-Type: 표현 데이터의 형식
- - 미디어 타입, 문자 인코딩
- - ex> text/html; charset=utf-8, application/json, image/png
- 
-2. Content-Encoding: 표현 데이터의 압축 방식
- - 표현 데이터를 압축하기 위해 사용
- - 데이터를 전달하는 곳에서 압축 후 인코딩 헤더를 추가
- - ex> gzip, deflate, identity
+1. From: 유저 에어전트의 이메일 정보
 
-3. Content-Language: 표현 데이터의 자연 연어
- - 표현 데이터의 자연 언어를 표현
+2. Referer: 이전 웹 페이지 주소
+ - A -> B로 이동하는 경우 B를 요청할 때 Referer:A 를 포함해서 요청
+3. User-Agent: 유저 에이전트 애플리케이션 정보
+ - 클라이언트의 애플리케이션 정보(웹 브라우저 정보 등)
+ - 통계 및 브라우저별 장애 파악에 용이
 
-4. Content-Length: 표현 데이터의 길이
- - 바이트 단위
+4. Server: 요청을 처리하는 오리진 서버의 소프트웨어 정보
 
-## 일반 헤더 - 협상: 클라이언트가 선호하는 표현 요청
+5. Date: 메시지가 생성된 날짜
 
-1. Accept: 클라이언트가 선호하는 미디어 타입 전달
+## 특별한 정보
 
-2. Accept-Charset: 클라이언트가 선호하는 문자 인코딩
+1. Host: 요청한 정보(도메인)
+ - 특정 서버(100.100.100.1)에 여러개의 애플리케이션이 구동되고 있을 경우 어느 도메인에 요청하는지에 대한 정보
+2. Location: 페이지 리다이렉션
 
-3. Accept-Encoding: 클라이언트가 선호하는 압축 인코딩 
+3. Allow: 허용 가능한 HTTP 메서드
 
-4. Accept-Language: 클라이언트가 선호하는 자연 언어
+4. Retry-After: 유저 에이전트가 다음 요청을 하기까지 기다려야 하는 시간
+
+## 인증 정보
+ 1. Authorization: 클라이언트 인증 정보를 서버에 전달
+
+ 2. WWW-Authenticate: 리소스 접근시 필요한 인증 방법 정의
